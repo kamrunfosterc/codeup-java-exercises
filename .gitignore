@@ -2,3 +2,4 @@
 .idea
 #ignores any .iml files
 *.iml
+/out/*

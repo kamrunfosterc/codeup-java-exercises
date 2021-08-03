@@ -16,13 +16,25 @@ public class Bob {
 
 
         //TODO GOT STUCK
-        System.out.println("Ask Bob anything. ");
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.next();
+        System.out.println("Ask Bob anything. ");
 
-        if(input.endsWith("?")){
-            System.out.println("Sure");
+        String inputResponse = scanner.nextLine().trim();//trim() was Ry suggestion
+//        String inputResponse = scanner.nextLine(); // my initial version
+        if(inputResponse.endsWith("?")){
+            System.out.println("Sure.");
+        } else if(inputResponse.endsWith("!")){
+            System.out.println("Whoa, chill out!");
+        } else if(inputResponse.isEmpty()){//inputResponse.equals("") try this one
+            System.out.println("Fine. Be that way!");
+        } else {
+            System.out.println("Whatever");
         }
+
+
+
+
+
 
 
 

@@ -34,7 +34,11 @@ public class ControlFlowExercises {
 
         //TODO c) For
         for (int j = 5; j <= 15; j++) {
-            System.out.println(j);
+            System.out.println("Forloop count " + j);
+        }
+
+        for (int j = 0; j < 100; j+=2) {
+            System.out.println("Count to 100 by 2's" + j);
         }
 
 

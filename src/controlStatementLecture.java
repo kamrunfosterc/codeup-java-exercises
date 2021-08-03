@@ -93,7 +93,19 @@ public class controlStatementLecture {
             }
             System.out.println(i);
         }
-        // putting child down missed after this point, rewatch video
+
+        // THis is a for loop that will stop at the number 45
+        for (int i = 0; i < 100; i++) {
+            if (i == 45){
+                System.out.println("Breaking at 45");
+                break;
+            }
+
+            System.out.println(i);
+
+        }
+
+
 
     }
 }

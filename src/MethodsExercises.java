@@ -63,36 +63,37 @@ public class MethodsExercises {
 //      return min >= 1 && max <= 10; alternatively to if statement
 
     //TODO 3. ############# ############# ############# ############# #############
-//    public static String getFactorialString(int numb){
-//        String stringToReturn = "";
-//        for (int i = 1; i <= numb; i++) {
-//            if (i == numb){
-//                stringToReturn += i;
-//            } else {
-//                stringToReturn ;
-//            }
-//        }
-//    }
-//    public static void getFactorial(int integer){//Recursion operation
-//        int factorialNumb = getInteger(1,10);
-//        for (int i = 1; i <= factorialNumb; i++) {
-////            System.out.printf(i + "! = " + getFactorialString(i) + " = " + getFactorialSum(i));
-////            System.out.printf("%d! = %s = %d\n", i, getFactorialString(i), getFactorialSum(i));// alt
-//            System.out.println("%d! =",i);
-//            System.out.println(" %-20s",getFactorialString(i));
-//            System.out.println("= %d\n",getFactorialSum(i));
-//
-//        }
-//    }
-//    public static int getFactorialSum(int num){
-//        int sum = 0;
-//        for (int i = 2; i < num; i++) {
-//            sum *= i;
-//        }
-//        return sum;
-//    }
+    public static String getFactorialString(int number){
+        String stringToReturn = "";
+        for (int i = 1; i <= number; i++) {
+            if (i == number){
+                stringToReturn += i;
+            } else {
+                stringToReturn += i + " x ";
+            }
+        }
+        return stringToReturn;
+    }
+    public static void getFactorial(){//Recursion operation
+        int factorialNumb = getInteger(1,10);
+        for (int i = 1; i <= factorialNumb; i++) {
+//            System.out.printf(i + "! = " + getFactorialString(i) + " = " + getFactorialSum(i));
+//            System.out.printf("%d! = %s = %d\n", i, getFactorialString(i), getFactorialSum(i));// alt
+            System.out.printf("%d! =",i);
+            System.out.printf(" %-20s",getFactorialString(i));
+            System.out.printf("= %d\n",getFactorialSum(i));
+        }
+    }
+    public static int getFactorialSum(int num){
+        int sum = 1;
+        for (int i = 2; i < num; i++) {
+            sum *= i;
+        }
+        return sum;
+    }
 
 
+//        my version that wasn't working
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter an integer from 1 to 10. " );
 //        String integer = scanner.nextLine();// not sure why it needs to be a string
@@ -140,6 +141,20 @@ public class MethodsExercises {
         }
     }
 
+    //recursion example
+    public static int getRecursionInt(int min, int max){
+        Scanner user = new Scanner(System.in);
+        System.out.println("Enter a number between "+ min + " and "+ max +": ");
+        int inputResponse = user.nextInt();
+
+        if (inputResponse >= min && inputResponse <= max){
+            return inputResponse;
+        } else {
+            System.out.println(inputResponse+" is not w/in the aloud range.");
+            return getInteger(min, max);
+        }
+    }
+
     //TODO 5. ############# ############# ############# ############# #############
 //    Game Development 101
 //
@@ -162,6 +177,8 @@ public class MethodsExercises {
 //
 //    Keep track of how many guesses a user makes.
 //    Set an upper limit on the number of guesses.
+
+
 
 
     public static void main(String[] args) {
@@ -189,8 +206,8 @@ public class MethodsExercises {
 //        int userInput = getInteger(1,10);
 
         //TODO 3. ############# ############# ############# ############# #############
-//        System.out.println("factorial result: " + factorial(integer));// yields 5040
-
+        System.out.println("factorial result: " + getFactorialString(4));// yields 5040
+        System.out.println(getFactorialSum(3));
 //        Prompt the user to enter an integer from 1 to 10.
 //        Display the factorial of the number entered by the user.
 //        Ask if the user wants to continue.
@@ -201,8 +218,9 @@ public class MethodsExercises {
 //        A factorial is a number multiplied by each of the numbers before it.
 //                Factorials are denoted by the exclamation point (n!). Ex:
         //TODO 4. ############# ############# ############# ############# #############
+        diceRoll();
 
-
+        //TODO 5. ############# ############# ############# ############# #############
 
 
 

@@ -4,5 +4,5 @@ public class Circle {
 
     private double radius;
 
-    private double;//incomplet
+//    private double;//incomplet
 }

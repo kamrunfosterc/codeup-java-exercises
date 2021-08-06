@@ -28,10 +28,44 @@ public class Input {
 //        }
         return personAnswer.contains("y");// return true if y is in answer
     }
-    public int getInt(int min, int max){}
-    public int getInt(){}
-    public double getDouble(double min, double max){}
-    double getDouble(){}
+    public int getInt(int min, int max){
+        System.out.println("Provide a whole number: ");
+        int userInt = scanner.nextInt();
+        if (userInt < min || userInt > max){
+            System.out.println("Please attempt again");
+            return getInt(min, max);
+        } else {
+            System.out.println("That one is valid.");
+            return userInt;
+        }
+    }
+    public int getInt(){
+        System.out.println("Provide a number please: ");
+        int userInt = scanner.nextInt();
+        return userInt;
+    }
+    public double getDouble(double min, double max){
+        System.out.println("Provide a decimal number: ");
+        double userDouble = scanner.nextInt();
+        if (userDouble < min || userDouble > max){
+            System.out.println("Please attempt again");
+            return getDouble(min, max);
+        } else {
+            System.out.println("That one is valid.");
+            return userDouble;
+        }
+    }
+    double getDouble(){
+        System.out.println("Provide a decimal number please: ");
+        double userDouble = scanner.nextInt();
+        return userDouble;
+    }
+    //TODO PART 1 BONUS
+    double getDouble(String prompt){
+        System.out.println(prompt);//
+        double userNewDouble = scanner.nextInt();
+        return userNewDouble;
+    }
 
 //    public start here
 

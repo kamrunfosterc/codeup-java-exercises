@@ -34,7 +34,7 @@ public class Person {
         System.out.println(person.getName());
         person.sayHello();*/
 
-        //TODO Understanding references
+        //TODO Part 1 Understanding references
         Person person1 = new Person("Kamrun");
         Person person2 = new Person("Kamrun");
         System.out.println(person1.getName().equals(person2.getName()));
@@ -52,9 +52,6 @@ public class Person {
         person6.setName("Mr. Carson Williams");// changing name of person 6
         System.out.println("Who are you? "+ person5.getName());// name changed
         System.out.println("What is your new name? "+ person6.getName());// name changed as well
-
-
-
 
     }
 

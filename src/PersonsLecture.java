@@ -56,7 +56,6 @@ public class PersonsLecture {// embodies what we want to have our person be
     // by any source directory calling that package name
 
 
-
     public static void main(String[] args) {// static level, go to classes not objects
         PersonsLecture bob = new PersonsLecture();// class_name variable_name = new 'class name'()
         bob.firstName = "Bob";
@@ -106,4 +105,5 @@ public class PersonsLecture {// embodies what we want to have our person be
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
 }

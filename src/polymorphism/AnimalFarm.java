@@ -4,7 +4,7 @@ public class AnimalFarm {
     //TODO final keyword
     public static final int MAX_FARM_ANIMALS = 10;// final field
 
-    //final method can't be overriden
+    //final method can't be overridden
 
     public static void main(String[] args) {
         Animal genericAnimal =new Animal();
@@ -34,6 +34,7 @@ public class AnimalFarm {
 
         //TODO Casting (not best practices/ more of a work around iff)
         ((Cat) genericAnimal).purring();
+
 
     }
 }

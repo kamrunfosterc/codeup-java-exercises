@@ -1,0 +1,8 @@
+This is to put in order the exercises/ projects that we work in JAVA
+
+JAVA I Exercises (created)
+1. INTRO: .gitignore/ HelloWorld.java
+2. Java Syntax, Data Types, and Variables: HelloWorld... myFavoriteNumber/ myString/ myNumber
+    - have as a bonus, Integer.MAX_VALUE
+3. Console Input and Output: ConsoleExercises/nextLine
+4.Control statements and loops: ControlFlowExercises

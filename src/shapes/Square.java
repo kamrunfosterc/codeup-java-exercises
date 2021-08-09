@@ -1,6 +1,6 @@
 package shapes;
 
-public class Square extends Rectangle{// inherits Rectangle
+public class Square extends Quadrilateral {// inherits Rectangle prior to we were extending Rectangle
 
 //    protected int side;// initialized property
 //    protected String areaMsg = "Area";// using to tell if I am using the override
@@ -32,6 +32,18 @@ public class Square extends Rectangle{// inherits Rectangle
 
     //TODO More Shapes Exercise
 
+    public Square(double side) {
+        super(side,side);
+    }
 
 
+    @Override
+    public double getPerimeter() {
+        return (4*super.length);
+    }
+
+    @Override
+    public double getArea() {
+        return super.length * super.length;
+    }
 }

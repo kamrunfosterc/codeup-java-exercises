@@ -1,6 +1,6 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable{
 
 //    protected int length;
 //    protected int width;
@@ -40,7 +40,19 @@ public class Rectangle {
 //    }
 
     //TODO More Shapes Exercise
+    public Rectangle(double length, double width) {//creator constructor matching super class
+        super(length, width);
+    }
 
+    @Override
+    public double getPerimeter() {
+        return (2*length) + (2*width);
+    }
+
+    @Override
+    public double getArea() {
+        return length*width;
+    }
 
 
 }

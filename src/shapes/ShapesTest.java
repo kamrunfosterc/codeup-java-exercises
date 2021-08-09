@@ -2,6 +2,7 @@ package shapes;
 
 public class ShapesTest {
 
+
     public static void main(String[] args) {
         //TODO
         // create a variable of the type Rectangle named box1 and assign it a new instance of the Rectangle

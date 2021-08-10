@@ -90,11 +90,11 @@ public class ArraysDemo {
 
             System.out.print("| ");
 
-            for (int n : row) {
-                System.out.print(n + " | ");
+            for (int column : row) {
+                System.out.print(column + " | ");
             }
 
-            System.out.println();
+            System.out.println();// creates new line
         }
 
         System.out.println("+---+---+---+");

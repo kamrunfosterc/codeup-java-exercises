@@ -78,10 +78,30 @@ public class ArraysDemo {
 // the first element in the last row
         System.out.println(matrix[2][0]); // 7
 
-        String[][] names = {
-                {Mr., Mrs., Ms.},
-                {Smith, Jones}
-        };
+//        //Example
+//        String[][] names = {
+//                {"Mr.", "Mrs.", "Ms."},
+//                {"Smith", "Jones"}
+//        };
+//        System.out.println(names[0][0] + names[1][0]);
+
+        for (int[] row : matrix) {
+            System.out.println("+---+---+---+");
+
+            System.out.print("| ");
+
+            for (int n : row) {
+                System.out.print(n + " | ");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println("+---+---+---+");
+
+
+
+
     }
 
 }

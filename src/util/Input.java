@@ -29,13 +29,14 @@ public class Input {
         return personAnswer.contains("y");// return true if y is in answer
     }
     public int getInt(int min, int max){
-        System.out.println("Provide a whole number: ");
+//        System.out.println("Provide a whole number: ");
         int userInt = scanner.nextInt();
         if (userInt < min || userInt > max){
-            System.out.println("Please attempt again");
+            System.out.println("Invalid input! Try again.");
+//            System.out.println("Please attempt again");
             return getInt(min, max);
         } else {
-            System.out.println("That one is valid.");
+//            System.out.println("That one is valid.");
             return userInt;
         }
     }

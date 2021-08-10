@@ -32,7 +32,7 @@ public class Square extends Quadrilateral {// inherits Rectangle prior to we wer
 
     //TODO More Shapes Exercise
 
-    public Square(double side) {
+    public Square(double side) {// our constructor
         super(side,side);
     }
 
@@ -45,5 +45,16 @@ public class Square extends Quadrilateral {// inherits Rectangle prior to we wer
     @Override
     public double getArea() {
         return super.length * super.length;
+    }
+
+    @Override
+    public void setLength(double length) {
+        this.length = length;
+        this.width = length;
+    }
+
+    @Override
+    public void setWidth(double width) {
+        this.setLength(width);
     }
 }

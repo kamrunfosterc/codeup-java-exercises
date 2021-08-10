@@ -41,6 +41,7 @@ public class ShapesTest {
         System.out.println("myShape Square Perimeter: "+myShape.getArea() + " " + areaUnits);
         //        Rectangle box1 = new Rectangle(5, 4);
         //TODO End of Exercise
+        myShape.getArea();
 
 
 

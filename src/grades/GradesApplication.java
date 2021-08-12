@@ -8,7 +8,9 @@ public class GradesApplication {
 
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
-        Student studentJohnny = new Student("Xayden");//student #1
+
+        //todo creating Student object
+        Student studentXayden = new Student("Xayden");//student #1
         Student studentKamrun = new Student("Kamrun");//student #2
         Student studentJasmine = new Student("Jasmine");//student #3
         Student studentHarper = new Student("Harper");//student #4
@@ -17,14 +19,17 @@ public class GradesApplication {
         Student studentAshley = new Student("Ashley");//student #7
 
         //todo ADDED students and 3 grades per student
-        students.put("Jsun78",studentJohnny);//created relationship between these two values
-        System.out.println(students.get("Jsun78"));// exist in hashmap
-        studentJohnny.addGrade(84);
-        studentJohnny.addGrade(80);
-        studentJohnny.addGrade(91);
-        System.out.println("Johnny's grade average: "+ studentJohnny.getGradeAverage());
+        students.put("Jsun78",studentXayden);//created relationship between these two values
+        studentXayden.addGrade(84);
+        studentXayden.addGrade(80);
+        studentXayden.addGrade(91);
+        System.out.println("Xayden's grade average: "+ studentXayden.getGradeAverage());
+//        System.out.println(studentXayden);// returns grades.Student@3f0ee7cb
+//        System.out.println(students.get("Jsun78"));// exist in hashmap... returns grades.Student@3f0ee7cb also
 
-        students.put("Kfos0561!",studentKamrun);
+
+        students.put("Kfos0561!",studentKamrun);//this id is associated w/ this student
+        students.get("Kfos0561!");
         studentKamrun.addGrade(81);
         studentKamrun.addGrade(79);
         studentKamrun.addGrade(89);
@@ -64,6 +69,40 @@ public class GradesApplication {
 
 
         //todo think about how we can add more students w/out the need to do the above
+
+        //todo Collections Exercise part 3
+        System.out.println("Welcome!\n");
+        System.out.println("Here are the GitHub usernames of our students:");
+
+//        Welcome!
+//
+//                Here are the GitHub usernames of our students:
+//
+//|zgulde| |ryanorsinger| |jreich5| |fmendozaro| |MontealegreLuis|
+//
+//                What student would you like to see more information on?
+//
+//> pizza
+//
+//        Sorry, no student found with the GitHub username of "pizza".
+//
+//                Would you like to see another student?
+//
+//> y
+//
+//        What student would you like to see more information on?
+//
+//> zgulde
+//
+//        Name: Zach - GitHub Username: zgulde
+//        Current Average: 87.4
+//
+//        Would you like to see another student?
+//
+//> no
+//
+//        Goodbye, and have a wonderful day!
+
 
 
     }

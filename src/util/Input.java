@@ -15,8 +15,7 @@ public class Input {
     }
     public String getString(){
         System.out.println("Do something: ");// prompts for info
-        String personInput = scanner.nextLine();// stores types info in variable
-        return personInput;
+        return scanner.nextLine();//String personInput = scanner.nextLine();// stores types info in variable.. return personInput
     }
     public boolean yesNo(){
         System.out.println("Do you like to fly? (Yes/No) ");

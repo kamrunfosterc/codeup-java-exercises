@@ -26,13 +26,14 @@ public class Student {
         double sumOfGrades = 0;
         double numbOfGrades = studentGrades.size();
 
-        //todo working on for loop
+        //todo working on for loop... stuck
 //        for (double i = 0; i < studentGrades.size(); i++) {
 //            //step2 return sum/ numb of grades
 //            sumOfGrades += studentGrades[i];
 //        }
 //        return sumOfGrades/ numbOfGrades;
-        for (Integer studentGrade: studentGrades){
+
+        for (Integer studentGrade: studentGrades){// enhanced For Loop
             sumOfGrades += studentGrade;
         }
         return sumOfGrades/numbOfGrades;
@@ -45,6 +46,10 @@ public class Student {
 //        }
 //        return sumOfGrades/amountOfGrades;
 //    }
+
+    public String getName(){
+        return studentName;
+    }
 
 
     public static void main(String[] args) {

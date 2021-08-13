@@ -1,6 +1,7 @@
 package util;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.function.ToDoubleBiFunction;
 
 public class Input {
     //TODO Part 1 Create an input validation class
@@ -28,8 +29,15 @@ public class Input {
         return personAnswer.contains("y");// return true if y is in answer
     }
     public int getInt(int min, int max){//todo EXERCISES
-        System.out.println("Provide a whole number: ");
-        int userInt = scanner.nextInt();//TODO: removed for Exceptions and Error Handling
+        System.out.println("Provide a whole number between "+min+": "+max+": ");
+//        int userInt = scanner.nextInt();//TODO: removed for Exceptions and Error Handling
+        int userInt;
+        try{
+            userInt = Integer.valueOf(getString());
+        }catch(NumberFormatException e){
+            System.out.println("That is not an integer!");
+            return getInt(min, max);
+        }
         if (userInt < min || userInt > max){
             System.out.println("Invalid input! Try again.");
 //            System.out.println("Please attempt again");
@@ -41,6 +49,7 @@ public class Input {
 
     }
 
+    //todo: Exceptions and Error Handling
     public int getInt(){
         System.out.println("Provide a number please: ");
 //        int userInt = scanner.nextInt();//TODO: removed for Exceptions and Error Handling (checked)
@@ -49,22 +58,23 @@ public class Input {
         String s = getString();
 //        return Integer.valueOf(s);
         try{
-            return Integer.valueOf(s);//
+            return Integer.parseInt(s);//alt: return Integer.valueOf(s)
         } catch(NumberFormatException e){
             System.out.println("Error: input is not an integer");
             return getInt();// recursion: request if non valid
         }
     }
+
     //todo: Exceptions and Error Handling
-    double getDouble(){
+    public double getDouble(){
         System.out.println("Provide a decimal number please: ");
 //        double userDouble = scanner.nextInt();
 //        return userDouble;
         String s = getString();
         try{
-            return Double.valueOf(s);
+            return Double.parseDouble(s);
         }catch(NumberFormatException e){
-            System.out.println("");
+            System.out.println("Error, Error, Error!");
             return getDouble();
         }
     }
@@ -87,7 +97,26 @@ public class Input {
 //        return userDouble;
 //    }
 
-
+    // TODO: 8/13/21 EXCEPTIONS AND ERROR HANDLING EXERCISE BONUS
+    // TODO: 8/13/21 getBinary & getHex
+    public int getBinary(){
+        System.out.println("Enter a binary number: ");
+        try{
+            return Integer.valueOf(this.getString(), 2);
+        }catch(NumberFormatException e){
+            System.out.println("That is not a binary number!");
+            return getBinary();
+        }
+    }
+    public int getHex(){
+        System.out.println("Enter hex: ");
+        try{
+            return Integer.valueOf(this.getString(), 16);
+        }catch(NumberFormatException e){
+            System.out.println("That is not a double!");
+            return getHex();
+        }
+    }
 
     //TODO PART 1 BONUS
     double getDouble(String prompt){

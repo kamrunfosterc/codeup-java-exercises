@@ -9,9 +9,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Data_practice {//
+public class Data_practice {
 
     public static void main(String[] args)  throws IOException{//throws IOException
+        //refer to IO lecture for assistance
         String directory = "data_practice";
         String filename = "contacts.txt";
         Path dataDirectory = Paths.get(directory);//grabs String directory
@@ -47,7 +48,28 @@ public class Data_practice {//
         for (String line: contentReadsFromFile){
             System.out.println(line);
         }
-    }
 
-    // TODO: 8/13/21 create file io here
+//        List<String> contentReadsFromFile = Files.readAllLines(contactFile);// will read a files content
+//        List<String> lines = Arrays.asList("testing: 1, 5, 3", "testing: 2, 7, 4"); // create new List of strings
+//        Files.write(contactFile, lines);
+//
+//        for (String line: contentReadsFromFile){
+//            System.out.println(line);
+//        }
+//        //alternative to our Enhanced for loop
+////        for (int i = 0; i < lines.size(); i++) {
+////            System.out.println((i+1)+": "+lines.get(i));
+////        }
+//        //TODO: method that shows all contacts
+//        //TODO: Add new contact method
+//        //TODO: Search contact by name
+//        //TODO: delete existing contact
+
+
+
+
+
+    // *********************END OF MAIN METHOD*********************
+    }
+    // *********************END OF Data_practice Class*********************
 }

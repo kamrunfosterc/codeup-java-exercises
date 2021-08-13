@@ -12,5 +12,8 @@ public class Main_PRACTICE {
         //Search a contact by her name
         //Delete an existing contact
 
+
     }
+    // contactApp can be defined
+
 }

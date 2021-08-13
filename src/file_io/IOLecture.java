@@ -106,7 +106,7 @@ public class IOLecture {
         List<String> contentReadsFromFile = Files.readAllLines(dataFile);
 
 //        System.out.println(contentReadsFromFile);
-        for (String line: contentReadsFromFile){
+        for (String line: contentReadsFromFile){// enhanced for loop
             System.out.println(line);
         }
     }

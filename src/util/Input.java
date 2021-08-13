@@ -27,9 +27,9 @@ public class Input {
 //        }
         return personAnswer.contains("y");// return true if y is in answer
     }
-    public int getInt(int min, int max){
-//        System.out.println("Provide a whole number: ");
-        int userInt = scanner.nextInt();
+    public int getInt(int min, int max){//todo EXERCISES
+        System.out.println("Provide a whole number: ");
+        int userInt = scanner.nextInt();//TODO: removed for Exceptions and Error Handling
         if (userInt < min || userInt > max){
             System.out.println("Invalid input! Try again.");
 //            System.out.println("Please attempt again");
@@ -38,13 +38,38 @@ public class Input {
 //            System.out.println("That one is valid.");
             return userInt;
         }
+
     }
+
     public int getInt(){
         System.out.println("Provide a number please: ");
-        int userInt = scanner.nextInt();
-        return userInt;
+//        int userInt = scanner.nextInt();//TODO: removed for Exceptions and Error Handling (checked)
+//        return userInt;
+        System.out.println("Enter a number: ");
+        String s = getString();
+//        return Integer.valueOf(s);
+        try{
+            return Integer.valueOf(s);//
+        } catch(NumberFormatException e){
+            System.out.println("Error: input is not an integer");
+            return getInt();// recursion: request if non valid
+        }
     }
-    public double getDouble(double min, double max){
+    //todo: Exceptions and Error Handling
+    double getDouble(){
+        System.out.println("Provide a decimal number please: ");
+//        double userDouble = scanner.nextInt();
+//        return userDouble;
+        String s = getString();
+        try{
+            return Double.valueOf(s);
+        }catch(NumberFormatException e){
+            System.out.println("");
+            return getDouble();
+        }
+    }
+
+    public double getDouble(double min, double max){//todo EXERCISES
         System.out.println("Provide a decimal number: ");
         double userDouble = scanner.nextInt();
         if (userDouble < min || userDouble > max){
@@ -55,11 +80,15 @@ public class Input {
             return userDouble;
         }
     }
-    double getDouble(){
-        System.out.println("Provide a decimal number please: ");
-        double userDouble = scanner.nextInt();
-        return userDouble;
-    }
+
+//    double getDouble(){
+//        System.out.println("Provide a decimal number please: ");
+//        double userDouble = scanner.nextInt();
+//        return userDouble;
+//    }
+
+
+
     //TODO PART 1 BONUS
     double getDouble(String prompt){
         System.out.println(prompt);//

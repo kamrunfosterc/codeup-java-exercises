@@ -10,6 +10,32 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Data_practice {
+    protected static String directory = "data_practice";
+    protected static String filename = "contacts.txt";
+
+    public static void  displayContacts()throws IOException{
+        System.out.println("Testing displayContacts");
+        List<String> contentReadsFromFile = Files.readAllLines(getContacts());
+        for (String line: contentReadsFromFile){
+            System.out.println(line);
+        }
+    }
+    public static Path getContacts() throws IOException {
+        Path dataDirectory = Paths.get(directory);//grabs String directory
+        Path dataFile = Paths.get(directory, filename);
+        if (Files.notExists(dataDirectory)) {
+            Files.createDirectories(dataDirectory);
+        }
+
+        if (! Files.exists(dataFile)) {
+            Files.createFile(dataFile);
+        }
+        return dataFile;
+    }
+
+    public static void addContacts(){
+
+    }
 
     public static void main(String[] args)  throws IOException{//throws IOException
         //refer to IO lecture for assistance

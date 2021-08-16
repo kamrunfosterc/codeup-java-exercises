@@ -28,18 +28,29 @@ public class Main_PRACTICE {
     }
 
     public static void main(String[] args) {
-//        Conctact.contactApp().
+//        Contact.contactApp().
         //TODO note that Main class will be outside of contacts package
-//
-//        private static String dir = "data";
-//        private static
-        //// TODO: 8/13/21
-        // Show all your contacts
-        //Add a new contact
-        //Search a contact by her name
-        //Delete an existing contact
-        displayMenu();
 
+        Scanner userInput = new Scanner(System.in);
+        displayMenu();
+        int menuChoice = userInput.nextInt();
+        switch (menuChoice){
+            case 1:
+                System.out.println("Display contacts");;//calls method to view contacts
+                break;
+            case 2:
+                System.out.println("Add contacts");// method to add contacts
+                break;
+            case 3:
+                System.out.println("Search contacts");//search contact by name
+                break;
+            case 4:
+                System.out.println("Delete Contact");//delete existing contact
+                break;
+            case 5:
+                System.out.println("Exit program");//Exit
+                break;
+        };
 
     }
     // contactApp can be defined

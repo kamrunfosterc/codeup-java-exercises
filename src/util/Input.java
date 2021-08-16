@@ -6,7 +6,6 @@ import java.util.function.ToDoubleBiFunction;
 public class Input {
     //TODO Part 1 Create an input validation class
 
-    //
     private Scanner scanner;// initialized variable for when instance is created
 
     public Input(){// no argument constructor

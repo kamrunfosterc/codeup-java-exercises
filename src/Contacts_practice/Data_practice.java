@@ -4,24 +4,63 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
+import java.util.*;
 
 public class Data_practice {
 
     protected static String directory = "data_practice";
     protected static String filename = "contacts.txt";
+    private static Path dataDirectory = Paths.get(directory);//grabs String directory
+    private static Path dataFile = Paths.get(directory, filename);
+    static Scanner scanner = new Scanner(System.in);
 
-    public static void  displayContacts()throws IOException{
-        System.out.println("Testing displayContacts");
-        List<String> contentReadsFromFile = Files.readAllLines(getContacts());
-        for (String line: contentReadsFromFile){
-            System.out.println(line);
+
+
+    public static void searchingContacts() throws IOException {
+        String userResponse = scanner.next();
+        List<String> displayAllContacts = Files.readAllLines(dataFile);
+
+        for(String contact: displayAllContacts){
+            if(contact.toLowerCase().contains(userResponse.toLowerCase()));{
+                System.out.println(contact);
+            }
         }
     }
-    public static Path getContacts() throws IOException {
-        Path dataDirectory = Paths.get(directory);//grabs String directory
-        Path dataFile = Paths.get(directory, filename);
+    public static void addToContacts(String ContactsBeingAdded) throws IOException{
+        Files.write(
+                Paths.get(directory, filename),
+                Arrays.asList(ContactsBeingAdded),
+                StandardOpenOption.APPEND
+
+        );
+    }
+    public static void viewAllContacts() throws IOException{
+        List<String> showAllContacts = Files.readAllLines(dataFile);//todo check out
+        System.out.println("Name | Phone Number");
+        System.out.println("-------------------");
+
+        for(String contact: showAllContacts){
+            String userResponse = scanner.nextLine();
+            System.out.println(contact);
+        }
+    }
+    public static void removingAContact() throws IOException{
+        String userChoice = scanner.nextLine();
+        List<String> showFullContactList = Files.readAllLines(dataFile);
+        List<String> newContactList = new ArrayList<>();
+
+        for(String contact: showFullContactList){
+            if(!contact.toLowerCase().contains(userChoice.toLowerCase())){
+                newContactList.add(contact);
+            }
+        }
+        Files.write(dataFile, newContactList);
+    }
+
+    public static void initiateDataFile() throws IOException{
         if (Files.notExists(dataDirectory)) {
             Files.createDirectories(dataDirectory);
         }
@@ -29,34 +68,24 @@ public class Data_practice {
         if (! Files.exists(dataFile)) {
             Files.createFile(dataFile);
         }
-        return dataFile;
     }
 
-    public static void addContacts(){
-
-    }
 
     public static void main(String[] args)  throws IOException{//throws IOException
-        //refer to IO lecture for assistance
-        String directory = "data_practice";
-        String filename = "contacts.txt";
-        Path dataDirectory = Paths.get(directory);//grabs String directory
-        Path dataFile = Paths.get(directory, filename);//grabs String directory, String filename
-
         // TODO: 8/13/21
 //        try{
 //            throw IOException
 //        }catch(IOException e){
 //
+//
+
+//        if (Files.notExists(dataDirectory)) {
+//            Files.createDirectories(dataDirectory);
 //        }
-
-        if (Files.notExists(dataDirectory)) {
-            Files.createDirectories(dataDirectory);
-        }
-
-        if (! Files.exists(dataFile)) {
-            Files.createFile(dataFile);
-        }
+//
+//        if (! Files.exists(dataFile)) {
+//            Files.createFile(dataFile);
+//        }
 
 
         //        this will write contents to the file

@@ -1,4 +1,4 @@
-import Contacts_practice.Contact_practice;
+//import Contacts_practice.Contact_practice;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class Main_PRACTICE {
 
 //    private static String [] menu = {// main menu
 //            "1. View Contacts",
-//            "2. Add a new contact",
+//            "2in. Add a new contact",
 //            "3. Search a contact by name",
 //            "4. Delete an existing contact",
 //            "5. Exit",

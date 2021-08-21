@@ -22,6 +22,7 @@ public class Duck {
         this.age = age;
     }
 
+
     //todo throw illegal argument exception
     public Duck(String name, int age) {
         this.name = name;

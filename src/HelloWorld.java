@@ -36,22 +36,29 @@ public class HelloWorld {
 
         //#13
         // part 1
-        int x = 4;
+        int a = 4;
 //        x = x + 5;// x=+5
-        x=+5;
+        a+=5;
+        System.out.println("value of a: "+a);
 //        // part 2
-//        int x = 3;
-//        int y = 4;
+        int f = 3;
+        int g = 4;
 //        y = y * x;
+        g*=f;
+        System.out.println("value of g: "+g);
+
 //
 //        // part 3
-//        int x = 10;
-//        int y = 2;
-//        x = x / y;
-//        y = y - x;
+        int w = 10;
+        int z = 2;
+//        w = w / z;
+//        z = z - w;
+        w /= z;
+        z-=w;
+        System.out.println("value of w: "+w);
+        System.out.println("value of z: "+z);
 
-
-
+        // TODO: 8/22/21 END OF EXERCISE
 
     }
 }

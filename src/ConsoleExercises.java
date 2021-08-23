@@ -52,5 +52,8 @@ public class ConsoleExercises {
         System.out.println("Perimeter: " + perimeter);
 
         //TODO Try the bonuses Next
+
+
+        // TODO: 8/22/21 Redo Console IO exercises
     }
 }

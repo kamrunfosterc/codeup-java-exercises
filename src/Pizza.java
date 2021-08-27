@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pizza {
 
     // TODO: 8/24/21  DR Rob practise
@@ -11,12 +13,21 @@ public class Pizza {
 //        In your main, call makePizza and then call printPizza
 
     // pizza type field
-    public String pizzaType;// Cheese, Pepperoni, Margarita
+//    public String pizzaType;// Cheese, Pepperoni, Margarita
     public String pizzaSize;// Small 6", Medium 9", Large 12", and Extra Large 15" MIGHT CHANGE TO INT
     public String pizzaCrust;//hin, Hand-tossed, Pan
-
+    Scanner userEntry = new Scanner(System.in);
     // pizza size
     // pizza crust type
+    public String pizzaSize (String size){
+        Scanner userEntry = new Scanner(System.in);
+        System.out.println("Please choose your pizza size: small, medium, large, extra large >> "); //todo STARTING HERE
+        String chosenSize = userEntry.nextLine();
+        if (size == 'small'){
+            "Chosen Pizza Size: "
+        }
+
+    }
     public static void main(String[] args) {
 
     }

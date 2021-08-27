@@ -90,16 +90,18 @@ public class ConsoleExercises {
 
         System.out.println("\nEnter the width of our codeup classroom ");
         double width = Double.parseDouble(codeupPerimeter.nextLine());// accepts answer and converts to double
+        System.out.printf("you entered %s for the width", width);// THIS IS EXTRA, NOT REQUIRED FOR EXERCISE, JUST TRYING OUT
 
         System.out.println("\nEnter the length of our codeup classroom ");
         double length = Double.parseDouble(codeupPerimeter.nextLine());
         // at this point we have set both width, length to be doubles
         //next we define the math
+        System.out.printf("you entered %s for the length", length);// THIS IS EXTRA, NOT REQUIRED FOR EXERCISE, JUST TRYING OUT
 
         double perimeter = (2*width)+(2*length);
         double area = length*width;
 
-        System.out.printf("Our codeup class room has an area of %s sqft and a perimeter of %s ft!", area, perimeter);
+        System.out.printf("\nOur codeup class room has an Area of: %s sqft \nand\n a Perimeter of: %s ft!", area, perimeter);
 
         // TODO: 8/24/21 end of exercise 
 

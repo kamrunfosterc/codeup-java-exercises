@@ -1,5 +1,6 @@
 public class PracticePractice {
 
+//    1ST MAIN GROUP
     public static void main(String[] args) {
         String[] names = {"Rick", "Stacey", "Brad", "Becca"};
         String x;
@@ -14,6 +15,9 @@ public class PracticePractice {
             System.out.println("This will always run.");
         }
     }
+
+
 }
+
 
 

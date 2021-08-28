@@ -17,6 +17,14 @@ public class PizzaShop extends Pizza{
 //        Next, write a printPizza method that takes an ArrayList of dr_rob_pizza_practice.Pizza and prints out the pizzas in the ArrayList.
 //        In your main, call makePizza and then call printPizza
 
+    // // TODO: 8/28/21 Extra features to add on once we get ours down (TRY TO COMPLETE B4 NEXT SATURDAY)
+    //      Exercise part two (maybe start with pizza size and crust selections as an Enum/ Enumeration (under add new class/ interface/ enum)
+    //      1. add to pizza class an ingredient arraylist
+    //      2. how do we ant to represent an ingredient (lead us to the Enum)
+    //      3. how can we make pizzas to order?
+    //      4. some user interaction
+    //
+
 //    public static ArrayList<String> makePizza(){
 //        return makePizza();
 //    }

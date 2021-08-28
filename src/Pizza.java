@@ -6,6 +6,8 @@ public class Pizza {
     //    Make a Pizza class. It should have fields like pizza type (e.g., Cheese, Pepperoni, Supreme, etc.),
 //        size (Small, Medium, Large, and Extra Large), and crust type (Thin, Hand-tossed, Pan).
 //        Include accessors and an appropriate constructor.
+
+// TODO: 8/27/21
 //        Make a PizzaShop class. This class will have your main() method for the program.
 //        Write a static method in the PizzaShop class to make some pizza. The method should return an ArrayList of
 //        Pizza. Have the method store a few different types of pizza in the array list before returning it.
@@ -13,22 +15,56 @@ public class Pizza {
 //        In your main, call makePizza and then call printPizza
 
     // pizza type field
-//    public String pizzaType;// Cheese, Pepperoni, Margarita
-    public String pizzaSize;// Small 6", Medium 9", Large 12", and Extra Large 15" MIGHT CHANGE TO INT
-    public String pizzaCrust;//hin, Hand-tossed, Pan
-    Scanner userEntry = new Scanner(System.in);
-    // pizza size
-    // pizza crust type
-    public String pizzaSize (String size){
-        Scanner userEntry = new Scanner(System.in);
-        System.out.println("Please choose your pizza size: small, medium, large, extra large >> "); //todo STARTING HERE
-        String chosenSize = userEntry.nextLine();
-        if (size == 'small'){
-            "Chosen Pizza Size: "
-        }
+    private String pizzaType;// Cheese, Pepperoni, Margarita
+    private String pizzaSize;// Small 6", Medium 9", Large 12", and Extra Large 15" MIGHT CHANGE TO INT
+    private String pizzaCrust;//hin, Hand-tossed, Pan
 
+    public Pizza(String pizzaType, String pizzaSize, String pizzaCrust) { // todo created constructor
+        this.pizzaType = pizzaType;
+        this.pizzaSize = pizzaSize;
+        this.pizzaCrust = pizzaCrust;
     }
+
+    public String getPizzaType() {
+        return pizzaType;
+    }
+
+    public void setPizzaType(String pizzaType) {
+        this.pizzaType = pizzaType;
+    }
+
+    public String getPizzaSize() {
+        return pizzaSize;
+    }
+
+    public void setPizzaSize(String pizzaSize) {
+        this.pizzaSize = pizzaSize;
+    }
+
+    public String getPizzaCrust() {
+        return pizzaCrust;
+    }
+
+    public void setPizzaCrust(String pizzaCrust) {
+        this.pizzaCrust = pizzaCrust;
+    }
+
+    //    public String pizzaSize (String size){
+//        Scanner userEntry = new Scanner(System.in);
+//        System.out.println("Please choose your pizza size: small, medium, large, extra large >> "); //todo STARTING HERE
+//        String chosenSize = userEntry.nextLine();
+//        if (size == 'small'){
+//            "Chosen Pizza Size: "
+//        }
+//
+//    }
     public static void main(String[] args) {
+//
+//        Scanner userEntry = new Scanner(System.in);
+//
+//        Person john = new Person("John");
+//        System.out.println(john.getName());
+//        john.sayHello();
 
     }
 }
